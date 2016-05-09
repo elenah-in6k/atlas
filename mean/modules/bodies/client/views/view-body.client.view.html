@@ -1,0 +1,25 @@
+<section>
+  <div class="page-header">
+    <h1 data-ng-bind="vm.body.name"></h1>
+  </div>
+  <div class="pull-right"
+       data-ng-show="1">
+    <a class="btn btn-primary"
+       data-ui-sref="bodies.edit({ bodyId: vm.body._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" data-ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div data-ng-bind="vm.body.description"></div>
+  <div data-ng-bind="vm.body.function"></div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span data-ng-bind="vm.body.created | date:'mediumDate'"></span>
+    </em>
+  </small>
+  <p class="lead" data-ng-bind="vm.body.content"></p>
+</section>
+
